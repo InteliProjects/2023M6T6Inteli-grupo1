@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Encontre o Melhor Fornecedor</title>
+    <link rel="stylesheet"  href="style.css">
+</head>
+<body>
+
+    <form>
+        <div class="central">
+            <h1 class="titulo_grande">Encontre o Melhor Fornecedor</h1>
+            <label class="titulo" for="cie">CIE da Escola:</label>
+            <input type="text" id="cie" name="cie"><br>
+            <div class="titulo_resposta" id="resultado">Aqui o resultado</div>
+            <button class="btn" type="button" onclick="buscarMelhorFornecedor()">Buscar Fornecedor</button><br>
+            
+        </div>
+
+    </form>
+    
+
+    <script>
+        function buscarMelhorFornecedor() {
+            const cie = document.getElementById('cie').value;
+            const resultadoDiv = document.getElementById('resultado');
+
+            var raw = JSON.stringify({
+                "cie": cie
+            });
+
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+
+            fetch("http://127.0.0.1:5000/melhorfornecedor", requestOptions)
+                .then(response => response.text())
+                .then(result => {
+                    resultadoDiv.innerHTML = result; // Set the result in the div
+                })
+                .catch(error => console.log('error', error));
+        }
+    </script>
+</body>
+</html>

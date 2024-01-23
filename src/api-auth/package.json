@@ -1,0 +1,37 @@
+{
+    "name": "sed-auth",
+    "version": "1.0.0",
+    "description": "",
+    "main": "src/index.js",
+    "scripts": {
+        "dev": "ts-node-dev src/index.ts --respawn",
+        "test": "jest --detectOpenHandles",
+        "test:unit": "jest --rootDir=./src/",
+        "test:e2e": "jest --rootDir=./__tests__/"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@types/dotenv": "^8.2.0",
+        "@types/express": "^4.17.21",
+        "@types/firebase": "^3.2.1",
+        "@types/jest": "^29.5.10",
+        "@types/jsonwebtoken": "^9.0.5",
+        "@types/mysql": "^2.15.24",
+        "@types/supertest": "^2.0.16",
+        "dotenv": "^16.3.1",
+        "express": "^4.18.2",
+        "firebase": "^10.7.0",
+        "firebase-admin": "^11.11.1",
+        "jest": "^29.7.0",
+        "jsonwebtoken": "^9.0.2",
+        "mysql": "^2.18.1",
+        "supertest": "^6.3.3",
+        "ts-node-dev": "^2.0.0",
+        "typescript": "^5.3.2"
+    },
+    "devDependencies": {
+        "@jest/globals": "^29.7.0",
+        "ts-jest": "^29.1.1"
+    }
+}

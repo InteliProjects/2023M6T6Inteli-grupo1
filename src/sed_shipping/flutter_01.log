@@ -1,0 +1,101 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run
+
+## exception
+
+ArgumentError: Invalid argument(s): Uri org-dartlang-app:/web_plugin_registrant.dart must have scheme 'file:'.
+
+```
+#0      WindowsStyle.pathFromUri (package:path/src/style/windows.dart:86:7)
+#1      Context.fromUri (package:path/src/context.dart:1040:32)
+#2      FileSystem.getPath (package:file/src/interface/file_system.dart:158:24)
+#3      LocalFileSystem.file (package:file/src/backends/local/local_file_system.dart:26:54)
+#4      ErrorHandlingFileSystem.file (package:flutter_tools/src/base/error_handling_io.dart:121:24)
+#5      ProjectFileInvalidator.findInvalidated (package:flutter_tools/src/run_hot.dart:1522:25)
+#6      ResidentWebRunner._updateDevFS (package:flutter_tools/src/isolated/resident_web_runner.dart:511:80)
+#7      ResidentWebRunner.restart (package:flutter_tools/src/isolated/resident_web_runner.dart:385:43)
+<asynchronous suspension>
+#8      TerminalHandler._commonTerminalInputHandler (package:flutter_tools/src/resident_runner.dart:1790:40)
+<asynchronous suspension>
+#9      TerminalHandler.processTerminalInput (package:flutter_tools/src/resident_runner.dart:1830:7)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[32m[✓][39m Flutter (Channel stable, 3.16.0, on Microsoft
+    Windows [versÆo 10.0.22621.2861], locale pt-BR)
+    [32m•[39m Flutter version 3.16.0 on channel stable at
+      C:\flutter_windows_3.16.0-stable\flutter
+    [32m•[39m Upstream repository
+      https://github.com/flutter/flutter.git
+    [32m•[39m Framework revision db7ef5bf9f (5 weeks ago),
+      2023-11-15 11:25:44 -0800
+    [32m•[39m Engine revision 74d16627b9
+    [32m•[39m Dart version 3.2.0
+    [32m•[39m DevTools version 2.28.2
+
+[32m[✓][39m Windows Version (Installed version of Windows is
+    version 10 or higher)
+
+[33m[!][39m Android toolchain - develop for Android devices
+    (Android SDK version 34.0.0)
+    [32m•[39m Android SDK at
+      C:\Users\Inteli\AppData\Local\Android\Sdk
+    [32m•[39m Platform android-34, build-tools 34.0.0
+    [32m•[39m Java binary at: C:\Program
+      Files\Android\Android Studio\jbr\bin\java
+    [32m•[39m Java version OpenJDK Runtime Environment (build
+      17.0.6+0-b2043.56-10027231)
+    [33m![39m Some Android licenses not accepted. To resolve
+      this, run: flutter doctor --android-licenses
+
+[32m[✓][39m Chrome - develop for the web
+    [32m•[39m Chrome at C:\Program
+      Files\Google\Chrome\Application\chrome.exe
+
+[32m[✓][39m Visual Studio - develop Windows apps (Visual
+    Studio Community 2022 17.8.1)
+    [32m•[39m Visual Studio at C:\Program Files\Microsoft
+      Visual Studio\2022\Community
+    [32m•[39m Visual Studio Community 2022 version
+      17.8.34316.72
+    [32m•[39m Windows 10 SDK version 10.0.22621.0
+
+[32m[✓][39m Android Studio (version 2022.3)
+    [32m•[39m Android Studio at C:\Program
+      Files\Android\Android Studio
+    [32m•[39m Flutter plugin can be installed from:
+      🔨
+      https://plugins.jetbrains.com/plugin/9212-flutt
+      er
+    [32m•[39m Dart plugin can be installed from:
+      🔨
+      https://plugins.jetbrains.com/plugin/6351-dart
+    [32m•[39m Java version OpenJDK Runtime Environment (build
+      17.0.6+0-b2043.56-10027231)
+
+[32m[✓][39m VS Code (version 1.85.1)
+    [32m•[39m VS Code at
+      C:\Users\Inteli\AppData\Local\Programs\Microsof
+      t VS Code
+    [32m•[39m Flutter extension version 3.78.0
+
+[32m[✓][39m Connected device (3 available)
+    [32m•[39m Windows (desktop) • windows • windows-x64    •
+      Microsoft Windows [versÆo 10.0.22621.2861]
+    [32m•[39m Chrome (web)      • chrome  • web-javascript •
+      Google Chrome 120.0.6099.110
+    [32m•[39m Edge (web)        • edge    • web-javascript •
+      Microsoft Edge 120.0.2210.77
+
+[32m[✓][39m Network resources
+    [32m•[39m All expected network resources are available.
+
+[33m![39m Doctor found issues in 1 category.
+```
